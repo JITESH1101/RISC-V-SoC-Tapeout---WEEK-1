@@ -53,32 +53,32 @@ git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop
 Now lets simulate a 2x1 Multiplexer using iverilog and verify its functionality using gtkwave tool. 
 To invoke the iverilog tool and compile the source code file and testbench file , use the following command
 
-``bash
+```
 iverilog good_mux.v tb_good_mux.v
-``
+```
 
 Next , to run the simulation , run the following command
 
-``bash
+```
 ./a.out
-``
+```
 
 <img width="3970" height="2110" alt="iverilog gtkwave_good_mux" src="https://github.com/user-attachments/assets/57d57da2-3b22-43a0-a376-68045fc432a1" />
 
 After Simulation , to view the waveform using the gktwave tool, use the following command
 
-``bash
+```
 gtkwave tb_good_mux.vcd
-``
+```
 
 <img width="3970" height="2110" alt="gtkwave_good_mux" src="https://github.com/user-attachments/assets/bf8c0eb5-4a34-45a4-8629-7e99c96611fb" />
 
 Now lets check the code and testbench to check its functionality and verify it with the waveform if its the same
 We cam open the source and testbench files which are in ``.v`` format using the following command
 
-``bash
-gvim good_mux.v tb_good_mux.v
-``
+```
+gvim good_mux.v -o tb_good_mux.v
+```
 
 The following picture shows the source and testbench codes
 
@@ -171,44 +171,44 @@ After understanding design verification, the focus shifted to logic synthesis, w
 Now lets synthesize the the previously simulated 2x1 multiplexer design. 
 First to invoke the yosys tool , enter the following command in the linux terminal 
 
-``
+```
 Yosys
-``
+```
 Now to read the library file,
 
-``
+```
 read_liberty -lib /address/to/your/sky130/file/sky130_fd_sc_hd__tt_025C_1v80.lib
-``
+```
 
 Now to read the verilog file 
 
-``
+```
 read_verilog /home/vsduser/VLSI/sky130RTLDesignAndSynthesisWorkshop/verilog_files/good_mux.v
-``
+```
 
 Now to synthesise the top module
 
-``
+```
 synth -top good_mux
-``
+```
 
 Now to map the technology file to the design and complete the synthesis, 
 
-``
+```
 abc -liberty /address/to/your/sky130/file/sky130_fd_sc_hd__tt_025C_1v80.lib
-``
+```
 
 Now , to generate a netlist file 
 
-``
+```
 write_verilog -noattr good_mux_net.v
-``
+```
 
 Now, to visualize the gatelevel netlist ,
 
-``
+```
 show
-``
+```
 
 <img width="2761" height="1103" alt="show_schematic" src="https://github.com/user-attachments/assets/cd983552-efb7-457c-9d6b-434ba7103b39" />
 
