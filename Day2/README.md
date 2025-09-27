@@ -350,7 +350,7 @@ Here is the netlist and its visualization of ``mult8`` after synthesis using the
 
 Learned about timing libs , what each library file consists , observed standard cells , leaned about hirearchial vs flat synthesis , different flop coding styles and some interesting optimization techniques.
 
-
+Note: The tools used are the latest version of this date , the synthesis or the netlist visual respresentation might vary based on the version being used.
 
 
 
