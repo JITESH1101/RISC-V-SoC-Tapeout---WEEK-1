@@ -29,7 +29,7 @@ My learning journey began with an introduction to the fundamentals of digital de
 
         - These files are passed as inputs to the iverilog compiler. This tool compiles the code and generates a simulation executable.
 
-        - During simulation, a Value Change Dump (``bash .vcd ```) file can be generated. This file logs all the signal changes that occurred during the simulation run.
+        - During simulation, a Value Change Dump (``bash .vcd ``) file can be generated. This file logs all the signal changes that occurred during the simulation run.
 
         - The .vcd file is then loaded into a waveform viewer like gtkwave. This tool allows for the visual inspection of the design's signals over time, making it possible to debug and verify the behavior of the circuit.
 <img width="3094" height="1494" alt="Screenshot from 2025-09-23 17-01-10" src="https://github.com/user-attachments/assets/04c3863e-2cdc-41c6-b1b5-d16c028fa9e1" />
