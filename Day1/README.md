@@ -39,13 +39,14 @@ My learning journey began with an introduction to the fundamentals of digital de
 
 First we need the library and the rtl files to use the tools , so using the linux terminal , enter the following commands to clone a github repository
 
-``bash
-git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop 
-``
+```
+git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop
 
-``
+```
+
+```
  cd sky130RTLDesignAndSynthesisWorkshop/verilog_files
-``
+```
 
 <img width="3532" height="1906" alt="git_cloned_allfiles_there" src="https://github.com/user-attachments/assets/d709c841-9507-43a3-b78c-b383ec2fc75e" />
 
