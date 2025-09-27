@@ -182,7 +182,7 @@ end
 
 Learned Gate Level Synthesis , Synthesis Simulation Mismatch , Blocking and Non blocking statements
 
-
+Note: The tools used are the latest version of this date , the synthesis or the netlist visual respresentation might vary based on the version being used.
 
 
 
