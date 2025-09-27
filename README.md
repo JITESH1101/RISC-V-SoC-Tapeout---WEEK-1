@@ -21,3 +21,6 @@ DAY4 - https://github.com/JITESH1101/RISC-V-SoC-Tapeout---WEEK-1/blob/main/Day4/
 DAY5 - https://github.com/JITESH1101/RISC-V-SoC-Tapeout---WEEK-1/blob/main/Day5/README.md
 
 
+#  Conclusion
+
+With these fundamentals and important concepts learned , WEEK1 is completed and WEEK2 is coming soon
