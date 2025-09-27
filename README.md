@@ -7,3 +7,9 @@ Attention is given to efficient flop coding styles, since small differences in R
 On the verification side, Gate-Level Simulation (GLS) is carried out, and the significance of using blocking vs non-blocking statements correctly is emphasized to prevent synthesis-simulation mismatches. Finally, several optimization techniques in synthesis are reviewed to ensure designs are implemented in a scalable and efficient manner.
 
 Overall, Week 1 is designed to set a strong foundation for clean RTL practices, proper synthesis understanding, and awareness of common pitfalls that can impact later stages of the design flow.
+
+DAY1 - https://github.com/JITESH1101/RISC-V-SoC-Tapeout---WEEK-1/blob/main/Day1/README.md
+DAY2 - https://github.com/JITESH1101/RISC-V-SoC-Tapeout---WEEK-1/blob/main/Day2/README.md
+DAY3 - https://github.com/JITESH1101/RISC-V-SoC-Tapeout---WEEK-1/blob/main/Day3/README.md
+DAY4 - https://github.com/JITESH1101/RISC-V-SoC-Tapeout---WEEK-1/blob/main/Day4/README.md
+DAY5 - https://github.com/JITESH1101/RISC-V-SoC-Tapeout---WEEK-1/blob/main/Day5/README.md
