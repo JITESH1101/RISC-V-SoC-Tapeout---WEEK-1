@@ -41,6 +41,9 @@ First we need the library and the rtl files to use the tools , so using the linu
 
 ``bash
 git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop 
+``
+
+``
  cd sky130RTLDesignAndSynthesisWorkshop/verilog_files
 ``
 
