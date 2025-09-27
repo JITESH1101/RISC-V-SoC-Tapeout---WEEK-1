@@ -1,3 +1,4 @@
+# DAY1
 # Introduction to Open Source Simulator Icarus Verilog (iverilog)
 
 My learning journey began with an introduction to the fundamentals of digital design verification. The core concepts of what a design is, how it's tested, and the tools used for simulation were covered.
