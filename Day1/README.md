@@ -38,10 +38,12 @@ My learning journey began with an introduction to the fundamentals of digital de
 # Labs on iverilog and gtkwave
 
 First we need the library and the rtl files to use the tools , so using the linux terminal , enter the following commands to clone a github repository
+
 ``
 git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop
 cd sky130RTLDesignAndSynthesisWorkshop/verilog_files
 ``
+
 <img width="3532" height="1906" alt="git_cloned_allfiles_there" src="https://github.com/user-attachments/assets/d709c841-9507-43a3-b78c-b383ec2fc75e" />
 
 Now lets simulate a 2x1 Multiplexer using iverilog and verify its functionality using gtkwave tool. 
@@ -50,11 +52,13 @@ To invoke the iverilog tool and compile the source code file and testbench file 
 ``
 iverilog good_mux.v tb_good_mux.v
 ``
+
 Next , to run the simulation , run the following command
 
 ``
 ./a.out
 ``
+
 <img width="3970" height="2110" alt="iverilog gtkwave_good_mux" src="https://github.com/user-attachments/assets/57d57da2-3b22-43a0-a376-68045fc432a1" />
 
 After Simulation , to view the waveform using the gktwave tool, use the following command
@@ -62,6 +66,7 @@ After Simulation , to view the waveform using the gktwave tool, use the followin
 ``
 gtkwave tb_good_mux.vcd
 ``
+
 <img width="3970" height="2110" alt="gtkwave_good_mux" src="https://github.com/user-attachments/assets/bf8c0eb5-4a34-45a4-8629-7e99c96611fb" />
 
 Now lets check the code and testbench to check its functionality and verify it with the waveform if its the same
@@ -161,41 +166,55 @@ After understanding design verification, the focus shifted to logic synthesis, w
 
 Now lets synthesize the the previously simulated 2x1 multiplexer design. 
 First to invoke the yosys tool , enter the following command in the linux terminal 
+
 ``
 Yosys
 ``
 Now to read the library file,
+
 ``
 read_liberty -lib /address/to/your/sky130/file/sky130_fd_sc_hd__tt_025C_1v80.lib
 ``
+
 Now to read the verilog file 
+
 ``
 read_verilog /home/vsduser/VLSI/sky130RTLDesignAndSynthesisWorkshop/verilog_files/good_mux.v
 ``
+
 Now to synthesise the top module
+
 ``
 synth -top good_mux
 ``
+
 Now to map the technology file to the design and complete the synthesis, 
+
 ``
 abc -liberty /address/to/your/sky130/file/sky130_fd_sc_hd__tt_025C_1v80.lib
 ``
+
 Now , to generate a netlist file 
+
 ``
 write_verilog -noattr good_mux_net.v
 ``
+
 Now, to visualize the gatelevel netlist ,
+
 ``
 show
 ``
+
 <img width="2761" height="1103" alt="show_schematic" src="https://github.com/user-attachments/assets/cd983552-efb7-457c-9d6b-434ba7103b39" />
 
 We can open the netlist file using gvim command and check the netlist
+
 <img width="3172" height="1736" alt="simplified_netlist" src="https://github.com/user-attachments/assets/ec17f720-e3a9-4194-9d01-808461be87c6" />
 
 # Summary
 
- Learnt about simulators, designs, and testbenches, ran the  first Verilog simulation with iverilog and visualized waveforms, analyzed the 2-to-1 mux code and explored Yosys and learned why gate libraries have various flavors.
+Learnt about simulators, designs, and testbenches, ran the  first Verilog simulation with iverilog and visualized waveforms, analyzed the 2-to-1 mux code and explored Yosys and learned why gate libraries have various flavors.
 
 
 
