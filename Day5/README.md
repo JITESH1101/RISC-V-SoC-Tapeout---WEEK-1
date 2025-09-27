@@ -133,9 +133,10 @@ Now , to demonstrate ``for loop`` and ``for generate``, the following are the si
 
 - demux_generate
 
-file:///home/jitesh/Pictures/Screenshots/WEEK1_day5/demux_generate_gtkwave.png
+<img width="3974" height="1748" alt="demux_generate_gtkwave" src="https://github.com/user-attachments/assets/786c16a3-15dd-4aae-98d3-26692b45968d" />
 
-file:///home/jitesh/Pictures/Screenshots/WEEK1_day5/dmux_Generate_synthesis_show.png
+
+<img width="2471" height="2343" alt="dmux_Generate_synthesis_show" src="https://github.com/user-attachments/assets/29856bd2-2771-41d3-a1e6-9b23c55b73e1" />
 
 - demux_Case
 
