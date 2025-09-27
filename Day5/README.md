@@ -172,7 +172,7 @@ By comparing both the waveforms for the rippe carry adder we see that it is work
 Learned IF CASE constructs , for loops , for generate and performed lab exercises on them and verified a Ripple Carry adder at the end
 
 
-
+Note: The tools used are the latest version of this date , the synthesis or the netlist visual respresentation might vary based on the version being used.
 
 
 
