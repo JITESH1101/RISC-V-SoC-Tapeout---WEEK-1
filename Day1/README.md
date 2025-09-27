@@ -219,7 +219,7 @@ We can open the netlist file using gvim command and check the netlist
 
 Learnt about simulators, designs, and testbenches, ran the  first Verilog simulation with iverilog and visualized waveforms, analyzed the 2-to-1 mux code and explored Yosys and learned why gate libraries have various flavors.
 
-
+Note: The tools used are the latest version of this date , the synthesis or the netlist visual respresentation might vary based on the version being used.
 
 
 
