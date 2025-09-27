@@ -39,9 +39,9 @@ My learning journey began with an introduction to the fundamentals of digital de
 
 First we need the library and the rtl files to use the tools , so using the linux terminal , enter the following commands to clone a github repository
 
-``
-git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop
-cd sky130RTLDesignAndSynthesisWorkshop/verilog_files
+``bash
+git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop 
+ cd sky130RTLDesignAndSynthesisWorkshop/verilog_files
 ``
 
 <img width="3532" height="1906" alt="git_cloned_allfiles_there" src="https://github.com/user-attachments/assets/d709c841-9507-43a3-b78c-b383ec2fc75e" />
@@ -49,13 +49,13 @@ cd sky130RTLDesignAndSynthesisWorkshop/verilog_files
 Now lets simulate a 2x1 Multiplexer using iverilog and verify its functionality using gtkwave tool. 
 To invoke the iverilog tool and compile the source code file and testbench file , use the following command
 
-``
+``bash
 iverilog good_mux.v tb_good_mux.v
 ``
 
 Next , to run the simulation , run the following command
 
-``
+``bash
 ./a.out
 ``
 
@@ -63,7 +63,7 @@ Next , to run the simulation , run the following command
 
 After Simulation , to view the waveform using the gktwave tool, use the following command
 
-``
+``bash
 gtkwave tb_good_mux.vcd
 ``
 
@@ -72,7 +72,7 @@ gtkwave tb_good_mux.vcd
 Now lets check the code and testbench to check its functionality and verify it with the waveform if its the same
 We cam open the source and testbench files which are in ``.v`` format using the following command
 
-``
+``bash
 gvim good_mux.v tb_good_mux.v
 ``
 
