@@ -22,6 +22,21 @@ In this section, the fundamental concepts of timing libraries and how they accou
 
        - The characteristics of these cell designs across all the different PVT corners are captured and stored in the timing libraries, which are then used by synthesis and timing analysis tools.
 
+Now lets explore the library file and see what it contains , but to open it we need a file editor, so lets install gvim
+```
+sudo apt install gvim
+```
+
+Now to open the library file sky130_fd_sc_hd__tt_025C_1v80.lib , enter the following command
+
+```
+gvim sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+<img width="3960" height="2501" alt="Lib_file" src="https://github.com/user-attachments/assets/e6b69401-0cc4-481c-bd53-9cc07023ed03" />
+
+Also here is the comparision between two different standard cells in the library file
+
+<img width="3955" height="2464" alt="cell_comparision" src="https://github.com/user-attachments/assets/2777f227-eefc-4fd6-b54f-4c0124db9928" />
 
 # Hierarchical vs. Flat Synthesis
 
@@ -36,6 +51,20 @@ The different strategies for synthesizing a large System-on-Chip (SoC) design ar
         - This is particularly powerful when the design contains multiple instances of the same module. The module is synthesized only once, and the resulting netlist and timing information can be reused for all other identical instances.
 
         - This method significantly reduces the overall synthesis time and computational resources required, making it the preferred approach for modern, "massive" SoC designs.
+
+### Key Differences
+
+| Aspect                | Hierarchical Synthesis             | Flattened Synthesis           |
+|-----------------------|------------------------------------|------------------------------|
+| Hierarchy             | Preserved                          | Collapsed                    |
+| Optimization Scope    | Module-level only                  | Whole-design                 |
+| Runtime               | Faster for large designs           | Slower for large designs     |
+| Debugging             | Easier (traces to RTL)             | Harder                       |
+| Output Complexity     | Modular structure                  | Single, complex netlist      |
+| Use Case              | Modularity, analysis, reporting    | Maximum optimization         |
+
+---
+
 
 # Various Flop Coding Styles and Optimization
 
