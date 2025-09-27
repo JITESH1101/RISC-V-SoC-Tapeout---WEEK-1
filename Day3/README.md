@@ -125,7 +125,7 @@ We can visualize the changes in the netlist as follows
 
 Learned different types of optimization available in combinational and sequential logci and also optimizised sequential logic with unused outputs
 
-
+Note: The tools used are the latest version of this date , the synthesis or the netlist visual respresentation might vary based on the version being used.
 
 
 
