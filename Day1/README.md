@@ -112,14 +112,14 @@ After understanding design verification, the focus shifted to logic synthesis, w
 
         - An illustration was provided showing how Verilog code for a multiplexer (`` assign int = sel ? A : B;``) and a flip-flop (`` Q <= int;``) is mapped directly to their corresponding hardware gate symbols.
 
-     - The Synthesizer and `` .lib`` Files
+   - The Synthesizer and `` .lib`` Files
 
-          - The "Synthesizer" is the tool that performs synthesis. For this course, `` Yosys`` was introduced as the chosen open-source synthesis tool.
+        - The "Synthesizer" is the tool that performs synthesis. For this course, `` Yosys`` was introduced as the chosen open-source synthesis tool.
 
-          - For the synthesizer to create a netlist, it needs a library of available logic gates. This is provided in a `` .lib`` file, which is a collection of standard cells.
+        - For the synthesizer to create a netlist, it needs a library of available logic gates. This is provided in a `` .lib`` file, which is a collection of standard cells.
 
-          - These `` .lib`` files contain basic logical modules like AND, OR, NOT, flip-flops, etc.
-           <img width="3094" height="1494" alt="Screenshot from 2025-09-23 17-02-20" src="https://github.com/user-attachments/assets/bf3d009d-062b-4b03-ba7c-ce209f4bc595" />
+        - These `` .lib`` files contain basic logical modules like AND, OR, NOT, flip-flops, etc.
+          <img width="3094" height="1494" alt="Screenshot from 2025-09-23 17-02-20" src="https://github.com/user-attachments/assets/bf3d009d-062b-4b03-ba7c-ce209f4bc595" />
 
 
      - Different "Flavors" of Standard Cells
