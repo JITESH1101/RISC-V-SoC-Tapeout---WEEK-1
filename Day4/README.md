@@ -62,7 +62,7 @@ The misuse of these assignments is a primary source of synthesis-simulation mism
 
 # Labs on GLS and Synthesis Simulation mismatch
 
-First lets do do simulation for the following code 
+1) First lets do do simulation for the following code 
 
 ```
 module ternary_operator_mux (input i0, input i1, input sel, output y);
@@ -97,7 +97,7 @@ After dumping into vcd , invoke gtkwave tool and the waveform obtained is as fol
 By comparing the waveform, of simulation and after GLS waveform , we see that both are same , so there is no Synthesis Simulation Mismatch
 
 
-Now lets try the same with another code
+2) Now lets try the same with another code
 
 The following code is bad_mux to demonstrate the Synthesis Simulation Mismatch
 
