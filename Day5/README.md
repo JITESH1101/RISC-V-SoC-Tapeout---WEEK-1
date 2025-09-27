@@ -1,4 +1,4 @@
-<img width="2348" height="2343" alt="demux_Case_synthesis_show" src="https://github.com/user-attachments/assets/c568f866-2df1-4525-b98d-dfd7e6170414" /># DAY5
+# DAY5
 
 # IF CASE Constructs
 
