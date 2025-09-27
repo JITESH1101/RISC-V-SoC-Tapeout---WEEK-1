@@ -86,11 +86,11 @@ The following picture shows the source and testbench codes
 
 This Verilog code defines a 2-to-1 multiplexer and a testbench to verify its behavior.
 
-   _ Inputs: `` i0``, `` i1`` (data inputs), `` sel`` (select line)
+   - Inputs: `` i0``, `` i1`` (data inputs), `` sel`` (select line)
 
-   _ Output: `` y`` (data output)
+   -  Output: `` y`` (data output)
 
-   _ Logic: If the `` sel`` line is high (1), the output `` y`` is driven by input `` i1``; otherwise, `` y`` is driven by `` i0``.
+   - Logic: If the `` sel`` line is high (1), the output `` y`` is driven by input `` i1``; otherwise, `` y`` is driven by `` i0``.
 
 The functionality of the code matches with the functionality shown in the waveform
 
