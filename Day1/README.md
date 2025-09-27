@@ -121,50 +121,49 @@ After understanding design verification, the focus shifted to logic synthesis, w
         - These `` .lib`` files contain basic logical modules like AND, OR, NOT, flip-flops, etc.
           <img width="3094" height="1494" alt="Screenshot from 2025-09-23 17-02-20" src="https://github.com/user-attachments/assets/bf3d009d-062b-4b03-ba7c-ce209f4bc595" />
 
+ - Different "Flavors" of Standard Cells
 
-     - Different "Flavors" of Standard Cells
+      - It was explained that a `` .lib`` file doesn't just contain one version of each gate. It contains multiple "flavors."
 
-          - It was explained that a `` .lib`` file doesn't just contain one version of each gate. It contains multiple "flavors."
+      - This includes variations in the number of inputs (e.g., 2-input AND, 3-input AND, 4-input AND gates).
 
-          - This includes variations in the number of inputs (e.g., 2-input AND, 3-input AND, 4-input AND gates).
+      - Crucially, it also includes different performance versions of the same gate, often categorized as slow, medium, or fast.
 
-          - Crucially, it also includes different performance versions of the same gate, often categorized as slow, medium, or fast.
+  - The Need for Fast Cells (Setup Time)
 
-     - The Need for Fast Cells (Setup Time)
+       - The reason for having different speed flavors was explained in the context of timing paths between two flip-flops (DFF A and DFF B).
 
-          - The reason for having different speed flavors was explained in the context of timing paths between two flip-flops (DFF A and DFF B).
+       - The maximum operating speed of a circuit is determined by the longest combinational delay path. To ensure data is ready before the next clock edge arrives at DFF B, the following equation must be met: TCLK​>TCQ_A​+TCOMBI​+TSETUP_B​.
 
-          - The maximum operating speed of a circuit is determined by the longest combinational delay path. To ensure data is ready before the next clock edge arrives at DFF B, the following equation must be met: TCLK​>TCQ_A​+TCOMBI​+TSETUP_B​.
+       - To make the circuit run at a higher frequency (i.e., have a smaller TCLK​), the combinational delay (TCOMBI​) must be reduced. This is achieved by using faster cells in that logic path.
 
-          - To make the circuit run at a higher frequency (i.e., have a smaller TCLK​), the combinational delay (TCOMBI​) must be reduced. This is achieved by using faster cells in that logic path.
+ - Trade-offs of Faster vs. Slower Cells
 
-     - Trade-offs of Faster vs. Slower Cells
+      - The physical difference between fast and slow cells was clarified. The load in a digital circuit is capacitive.
 
-          - The physical difference between fast and slow cells was clarified. The load in a digital circuit is capacitive.
+      - To charge/discharge this capacitance faster (leading to lower cell delay), transistors need to source more current. This is achieved by making the transistors wider.
 
-          - To charge/discharge this capacitance faster (leading to lower cell delay), transistors need to source more current. This is achieved by making the transistors wider.
+      - However, wider transistors result in low delay at the cost of more area and power.
 
-          - However, wider transistors result in low delay at the cost of more area and power.
+      - Conversely, narrower transistors have more delay but consume less area and power. Faster cells, therefore, come with a penalty.
 
-          - Conversely, narrower transistors have more delay but consume less area and power. Faster cells, therefore, come with a penalty.
+ - The Need for Slow Cells (Hold Time)
 
-     - The Need for Slow Cells (Hold Time)
+      - While fast cells are needed for performance, slow cells are also essential for fixing "hold" violations.
 
-          - While fast cells are needed for performance, slow cells are also essential for fixing "hold" violations.
+      - A hold violation occurs when data from DFF A changes too quickly and arrives at DFF B before the previous data has been properly latched. The condition to avoid this is: THOLD_B​<TCQ_A​+TCOMBI​.
 
-          - A hold violation occurs when data from DFF A changes too quickly and arrives at DFF B before the previous data has been properly latched. The condition to avoid this is: THOLD_B​<TCQ_A​+TCOMBI​.
+      - To fix a hold violation, the combinational path delay (TCOMBI​) needs to be increased. This is where slower cells are intentionally used to add delay and ensure the signal arrives later.
 
-          - To fix a hold violation, the combinational path delay (TCOMBI​) needs to be increased. This is where slower cells are intentionally used to add delay and ensure the signal arrives later.
+  - Guiding the Synthesizer with Constraints
 
-     - Guiding the Synthesizer with Constraints
+       - The final concept tied everything together. The synthesizer must be guided to make intelligent choices.
 
-          - The final concept tied everything together. The synthesizer must be guided to make intelligent choices.
+       - Using too many fast cells leads to a circuit with bad power and area characteristics, and can even cause hold time violations.
 
-          - Using too many fast cells leads to a circuit with bad power and area characteristics, and can even cause hold time violations.
-
-          - Using too many slow cells results in a sluggish circuit that cannot meet its performance targets.
-
-          - This guidance is provided to the synthesizer through a set of rules called "Constraints" (e.g., specifying the target clock frequency). The tool then uses these constraints to select the optimal mix of cell flavors to balance performance, power, and area.
+       - Using too many slow cells results in a sluggish circuit that cannot meet its performance targets.
+         
+       - This guidance is provided to the synthesizer through a set of rules called "Constraints" (e.g., specifying the target clock frequency). The tool then uses these constraints to select the optimal mix of cell flavors to balance performance, power, and area.
 
 # Labs on Yosys and SKY130 PDKs
 
